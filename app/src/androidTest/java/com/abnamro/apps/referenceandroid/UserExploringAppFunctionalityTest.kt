@@ -16,13 +16,24 @@ import org.junit.Rule
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
+class UserExploringAppFunctionalityTest {
 
     @get:Rule
     val activityRule = ActivityTestRule(MainActivity::class.java)
 
+    /*
+    Customer Journey:
+
+    After launching app the customer performs:
+    - Read title
+    - Read message
+    - Open overflow menu to view options
+    - Select option and confirm option dismisses
+    - Tap button and read message in time frame
+     */
+
     @Test
-    fun useAppContext() {
+    fun iWantToReadEverythingAndTapEverywhere() {
 
     }
 }
