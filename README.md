@@ -1,18 +1,25 @@
-# Test assignment
+# Nowhere Man App
 
-We are looking for Automation Engineers that have the mindset "only the sky is the limit" and "automation doesn't stop at testing, it's just a beginning!" ;)
+Nowhere Man App is an Android app that subconsciously starts playing the 1965 Beatles song "Nowhere Man" in the heads of the users.
 
-The purpose of this test assignment is to assess the applicant's automation skills, allowing him/her to show the best they can do and how fast they can learn.
-It is an open assignment. There is no the right answer and there is no end goal other than proving yourself. Surprise us!
+The unique design of the app leads users nowhere hence the name of the app ;)
 
-Make sure that you give detailed comments or descriptions of your tests.
-When the assignment is complete, please push your solution to Github(Gitlab) and send us the link to hr.grid.adi@nl.abnamro.com.
-If you have any questions, please contact us at hr.grid.adi@nl.abnamro.com.
+# Automation Testing
 
-Good luck.
+The test follows the 'Customer Journey' of a typical user. The benefit of this approach is that only valuable tests are written - no writing tests for the sake of tests - only testing valuable customer flows. This requires some careful thinking of how users are likely to interact with the app in an end-to-end fashion as it is detailed in the test comment. This includes the naming of the class and method.
 
-PS. We don't expect you to spend weeks (and sleepless nights) on doing it. Lets see how far you can get in 6-10 hours. We want to see how you approach and solve problems.
+The tests are written in Kotlin to provide a clean and pleasurable reading and coding experience.
 
-PSPS. Please use mobile native tools. (Tests written on Java are accepted too)
+For the purpose of this exercise the tests are contained in one file (for ease of review via Github) - if the app was to ever grow however then a page object model might be used and helper classes would be refactored out.
 
+Within the test method you will find the text that the user will actually see - this copy is not to be hidden in screen classes. This allows the test reader to see exactly what the user will be reading.
 
+The overflow is opened using native Espresso functionality.
+
+Assertions are done on UI elements to ensure they are completely displayed or no longer exist to avoid partially displayed elements existing.
+
+In order to assert that the Snackbar was dismissed I called on some pre-written code that can be used to remove flakiness from the test.
+
+# Future recommendations
+
+- [ ] Integrate [Composer](https://github.com/gojuno/composer) for parallel device execution plus screenshots and logging.
