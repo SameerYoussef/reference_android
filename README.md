@@ -20,6 +20,10 @@ Assertions are done on UI elements to ensure they are completely displayed or no
 
 In order to assert that the Snackbar was dismissed I called on some pre-written code that can be used to remove flakiness from the test.
 
-# Future recommendations
+# How to run test(s)
 
-- [ ] Integrate [Composer](https://github.com/gojuno/composer) for parallel device execution plus screenshots and logging.
+1. Have a device or emulator connected
+2. Run run_tests.sh from the command line
+
+![android_tests](https://user-images.githubusercontent.com/18099038/89117968-2ff74900-d4f6-11ea-8497-b337abaf7315.gif)
+
