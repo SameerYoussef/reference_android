@@ -1,8 +1,7 @@
 #!/bin/zsh
 
 # Build APKs
-./gradlew assembleDebug
-./gradlew assembleAndroidTest
+./gradlew assembleDebug assembleDebugAndroidTest 
 
 # Clean up any pre-existing reports
 rm -rf composer-output

@@ -18,7 +18,9 @@ The overflow is opened using native Espresso functionality.
 
 Assertions are done on UI elements to ensure they are completely displayed or no longer exist to avoid partially displayed elements existing.
 
-In order to assert that the Snackbar was dismissed I called on some pre-written code that can be used to remove flakiness from the test.
+In order to assert that the Snackbar was dismissed I called on some pre-written code that can be used to remove flakiness from the test. The custom ViewAction is a generic action that will loop until the main thread (used for UI rendering) until the state of the view has changed. This way we will only assert that the Snackbar has disappeared once it has indeed changed it's state.
+
+Test results are displayed using [Composer](https://github.com/gojuno/composer) which has many benefits such as parallel execution with sharding, a nice report with screenshots and logcat output plus JUnit4 generation.
 
 # How to run test(s)
 
@@ -27,3 +29,8 @@ In order to assert that the Snackbar was dismissed I called on some pre-written 
 
 ![android_tests](https://user-images.githubusercontent.com/18099038/89117968-2ff74900-d4f6-11ea-8497-b337abaf7315.gif)
 
+# Future work
+
+- [ ] Use [Composer's Gradle plugin](https://github.com/trevjonez/composer-gradle-plugin)
+- [ ] Tear down and recreate emulators for stability
+- [ ] Move away from the shell script to Fastlane or similar
